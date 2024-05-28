@@ -8,9 +8,14 @@ try:
     browser.get(link)
 
     # Ваш код, который заполняет обязательные поля
-    req_fields = browser.find_elements(By.XPATH,'//*[@required]')
-    for element in req_fields:
-        element.send_keys("RandomData")
+    req1 = browser.find_element(By.CSS_SELECTOR,'.first_block .first_class input')
+    req1.send_keys('rand')
+
+    req2 = browser.find_element(By.CSS_SELECTOR,'.first_block .second_class input')
+    req2.send_keys('rand2')
+
+    req3 = browser.find_element(By.CSS_SELECTOR,'.first_block .third_class input')
+    req3.send_keys('rand3')
 
     # Отправляем заполненную форму
     button = browser.find_element(By.CSS_SELECTOR, "button.btn")

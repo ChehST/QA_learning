@@ -3,18 +3,18 @@ from selenium.webdriver.common.by import By
 import time
 
 try: 
-    link = "https://suninjuly.github.io/registration2.html"
+    link = "http://suninjuly.github.io/registration1.html"
     browser = webdriver.Chrome()
     browser.get(link)
 
     # Ваш код, который заполняет обязательные поля
-    req1 = browser.find_element(By.TAG_NAME,'input')
+    req1 = browser.find_element(By.CSS_SELECTOR,'.first_block .first_class input')
     req1.send_keys('rand')
 
-    req2 = browser.find_element(By.CLASS_NAME, 'second')
+    req2 = browser.find_element(By.CSS_SELECTOR,'.first_block .second_class input')
     req2.send_keys('rand2')
 
-    req3 = browser.find_element(By.CLASS_NAME,'third')
+    req3 = browser.find_element(By.CSS_SELECTOR,'.first_block .third_class input')
     req3.send_keys('rand3')
 
     # Отправляем заполненную форму
