@@ -7,6 +7,7 @@
          1. title_dir
              1. exercise_dir
                  - *.ext_files
-2. другоая книга или курс
+2. Stepik Courses
+3. Other courses
 
 
